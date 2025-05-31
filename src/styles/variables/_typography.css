@@ -1,0 +1,6 @@
+:root {
+  --fgDefault: var(--base-color-neutral-12);
+  --bgDefault: var(--base-color-neutral-0);
+}
+html[color-scheme="dark"] {
+}

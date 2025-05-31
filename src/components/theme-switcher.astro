@@ -1,0 +1,16 @@
+---
+
+---
+
+<script type="module">
+  const toggleTheme = () => {
+    const current = document.documentElement.getAttribute("color-scheme");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("color-scheme", next);
+    localStorage.setItem("theme", next);
+  };
+  window.toggleTheme = toggleTheme;
+</script>
+<button onclick="toggleTheme()" aria-label="Toggle Theme">
+  Toggle Theme
+</button>
