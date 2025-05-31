@@ -1,17 +1,13 @@
-.flex {
-  display: flex;
-  flex-direction: row;
+.one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
+.two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
