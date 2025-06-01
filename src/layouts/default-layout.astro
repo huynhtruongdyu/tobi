@@ -12,8 +12,8 @@ const { title, description } = Astro.props;
   <BaseHead title={title} description={description} />
   <body>
     <Header />
-    <main class="min-h-[calc(100svh-2px-7rem)]">
-      <article class="mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <main class="content">
+      <article class="content__container px-default">
         <slot />
       </article>
     </main>
@@ -21,3 +21,13 @@ const { title, description } = Astro.props;
     <script src="//unpkg.com/alpinejs" defer></script>
   </body>
 </html>
+
+<style>
+  .content {
+    min-height: calc(100svh - 10rem);
+  }
+  .content__container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+</style>

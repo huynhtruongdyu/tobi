@@ -64,3 +64,15 @@ const { title, description } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+<script is:inline>
+  (function () {
+    try {
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark" || theme === "light") {
+        document.documentElement.setAttribute("color-scheme", theme);
+      }
+    } catch (e) {
+      // fallback or ignore error
+    }
+  })();
+</script>

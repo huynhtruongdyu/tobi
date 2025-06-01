@@ -2,12 +2,40 @@
 
 ---
 
-<footer class="border-gray-200 border-t-[1px] h-14">
-    <div class="flex justify-between items-center mx-auto sm:px-6 lg:px-8 max-w-7xl h-full">
-        <div class="flex flex-col justify-center items-start">
-            <strong><a href="/">Tobi</a></strong>
-            <span class="text-sm">© 2025 Tobi. All rights reserved.</span>
-        </div>
-        <div>1</div>
+<footer class="footer">
+  <div class="footer__container px-default">
+    <div class="footer__panel footer__panel--left">
+      <a href="/" class="text--sm font--bold">Tobi</a>
+      <small class="">© 2025 Tobi. All rights reserved.</small>
     </div>
+    <div class="footer__panel footer__panel--right"></div>
+  </div>
 </footer>
+<style>
+  .footer {
+    border-top: 1px solid #eaeaea;
+    height: 5rem;
+  }
+  .footer__container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+  }
+  .footer__panel {
+    flex: 1;
+    height: 100%;
+  }
+  .footer__panel--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .footer__panel--right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+</style>

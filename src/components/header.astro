@@ -3,21 +3,21 @@ import ThemeSwitcher from "./theme-switcher.astro";
 ---
 
 <header class="header">
-  <div class="flex items-center mx-auto sm:px-6 lg:px-8 max-w-7xl h-full">
-    <div class="flex-1/5">
-      <a href="/" class="font-semibold text-xl">Tobi</a>
+  <div class="header__container px-default">
+    <div class="header__panel header__panel--left">
+      <a href="/" class="text font--bold">Tobi</a>
     </div>
-    <nav class="flex-3/5">
-      <ul class="flex justify-center items-center gap-6">
+    <nav class="header__panel header__panel--center">
+      <ul class="header__nav">
         <li>
-          <a href="/" class="hover:underline">Home</a>
+          <a href="/" class="text text--sm">Home</a>
         </li>
-        <li><a href="#" class="hover:underline">About</a></li>
-        <li><a href="#" class="hover:underline">Projects</a></li>
-        <li><a href="#" class="hover:underline">Contact</a></li>
+        <li><a href="#" class="text text--sm">About</a></li>
+        <li><a href="#" class="text text--sm">Projects</a></li>
+        <li><a href="#" class="text text--sm">Contact</a></li>
       </ul>
     </nav>
-    <div class="flex-1/5 h-6">
+    <div class="header__panel header__panel--right">
       <ThemeSwitcher />
     </div>
   </div>
@@ -27,8 +27,42 @@ import ThemeSwitcher from "./theme-switcher.astro";
   .header {
     position: sticky;
     top: 0;
-    height: 3rem;
-
     border-bottom: 1px solid #eaeaea;
+    height: 5rem;
+  }
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+  }
+
+  .header__panel {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header__panel--left {
+    flex: 0 0 100px;
+  }
+
+  .header__panel--center {
+    flex: 1;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__panel--right {
+    flex: 0 0 100px;
   }
 </style>
